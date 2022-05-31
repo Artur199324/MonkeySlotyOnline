@@ -483,5 +483,9 @@ public class ResaltMSO {
         }
 
         mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).edit().putInt("scor", scoreMSO).apply();
+
+        if (scoreMSO == 0){
+            mainActivity.pp();
+        }
     }
 }

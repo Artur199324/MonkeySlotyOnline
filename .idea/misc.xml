@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/dialog.xml" value="0.1615" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/round.xml" value="0.1615" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/score_bac.xml" value="0.124" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/shaperect.xml" value="0.1615" />
@@ -11,6 +12,7 @@
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/activity_start_mso.xml" value="0.264" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/activity_wheel_mso.xml" value="0.264" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/dialog_m_s_o.xml" value="0.4" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/toast_bet.xml" value="0.264" />
         <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/toast_lost.xml" value="0.253125" />
       </map>

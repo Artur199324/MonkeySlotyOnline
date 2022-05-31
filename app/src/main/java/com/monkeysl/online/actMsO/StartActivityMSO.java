@@ -1,5 +1,7 @@
 package com.monkeysl.online.actMsO;
 
+import static com.monkeysl.online.actMsO.SlotActivityMSO.scoreMSO;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -22,6 +24,8 @@ public class StartActivityMSO extends AppCompatActivity {
         getWindow().addFlags(1024);
         ij();
         lk();
+
+
 
     }
 
