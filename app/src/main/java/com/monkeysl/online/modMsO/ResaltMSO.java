@@ -4,6 +4,7 @@ import static com.monkeysl.online.actMsO.SlotActivityMSO.betMSO;
 import static com.monkeysl.online.actMsO.SlotActivityMSO.scoreMSO;
 
 import android.content.Context;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -233,7 +234,7 @@ public class ResaltMSO {
         this.image18 = image18;
     }
 
-
+    Toast toast;
     boolean res = false;
 
     public void resss() {
@@ -473,7 +474,7 @@ public class ResaltMSO {
             View layout = inflater.inflate(R.layout.toast_lost,
                     (ViewGroup) mainActivity.findViewById(R.id.lost));
 
-            Toast toast = new Toast(mainActivity.getApplicationContext());
+            toast = new Toast(mainActivity.getApplicationContext());
             toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.setDuration(Toast.LENGTH_SHORT);
             toast.setView(layout);
@@ -485,7 +486,15 @@ public class ResaltMSO {
         mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).edit().putInt("scor", scoreMSO).apply();
 
         if (scoreMSO == 0){
-            mainActivity.pp();
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    toast.cancel();
+                    mainActivity.pp();
+                }
+            },1000);
+
         }
     }
 }

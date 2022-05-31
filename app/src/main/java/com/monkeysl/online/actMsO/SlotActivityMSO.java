@@ -56,8 +56,10 @@ public class SlotActivityMSO extends AppCompatActivity {
     final int DIALOG = 1;
     Button buttonMun;
     Button buttonPoin;
+    Toast toast;
 
     public void pp() {
+
         showDialog(DIALOG);
     }
 
@@ -168,11 +170,12 @@ public class SlotActivityMSO extends AppCompatActivity {
                     View layout = inflater.inflate(R.layout.toast_bet,
                             (ViewGroup) findViewById(R.id.tos));
 
-                    Toast toast = new Toast(getApplicationContext());
+                    toast = new Toast(getApplicationContext());
                     toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.setDuration(Toast.LENGTH_SHORT);
                     toast.setView(layout);
                     toast.show();
+
 
                 } else {
                     viewModMsO.move1(image1, image2, image3);
