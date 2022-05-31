@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/round.xml" value="0.1615" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/score_bac.xml" value="0.124" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/shaperect.xml" value="0.1615" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/shaperecttwo.xml" value="0.1615" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/drawable/tostbac.xml" value="0.1615" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/activity_start_mso.xml" value="0.264" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/activity_wheel_mso.xml" value="0.264" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/toast_bet.xml" value="0.264" />
+        <entry key="..\:/Users/artur/AndroidStudioProjects/MonkeySlotyOnline/app/src/main/res/layout/toast_lost.xml" value="0.253125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

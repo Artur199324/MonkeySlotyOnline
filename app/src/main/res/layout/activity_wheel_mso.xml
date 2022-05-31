@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    tools:context=".actMsO.WheelActivityMSO">
+
+    <ImageView
+        android:id="@+id/imageViewWe"
+        android:layout_width="702dp"
+        android:layout_height="299dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/w" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="304dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewWe"
+        app:layout_constraintVertical_bias="0.289"
+        app:srcCompat="@drawable/s" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="91dp"
+        android:layout_height="87dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewWe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewWe"
+        app:srcCompat="@drawable/c" />
+
+    <android.widget.Button
+        android:id="@+id/buttonTwist"
+        android:layout_width="116dp"
+        android:layout_height="46dp"
+        android:background="@drawable/shaperecttwo"
+        android:fontFamily="@font/original_surfer"
+        android:text="twist"
+        android:textColor="#FBF9F9"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewWe"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewWe"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageViewWe" />
+
+    <TextView
+        android:id="@+id/textViewwiin"
+        android:layout_width="116dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/shaperecttwo"
+        android:gravity="center_horizontal"
+        android:text="Win : 0"
+        android:textColor="#F8F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textViewscorrrr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shaperecttwo"
+        android:fontFamily="@font/original_surfer"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="TextView"
+        android:textColor="#FBF8F8"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewWe"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/imageViewWe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
