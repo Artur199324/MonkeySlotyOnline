@@ -56,18 +56,19 @@
 
     <TextView
         android:id="@+id/textViewwiin"
-        android:layout_width="116dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="134dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="284dp"
         android:background="@drawable/shaperecttwo"
-        android:gravity="center_horizontal"
         android:fontFamily="@font/original_surfer"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="0dp"
         android:text="Win : 0"
         android:textColor="#F8F5F5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewscorrrr"
+        app:layout_constraintStart_toStartOf="@+id/textViewscorrrr"
+        app:layout_constraintTop_toBottomOf="@+id/textViewscorrrr" />
 
     <TextView
         android:id="@+id/textViewscorrrr"
@@ -97,5 +98,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.301"
         app:srcCompat="@drawable/r" />
+
+    <android.widget.Button
+        android:id="@+id/buttonbac2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shaperecttwo"
+        android:fontFamily="@font/original_surfer"
+        android:text="back"
+        android:textColor="#F8F5F5"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTwist"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/buttonTwist"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

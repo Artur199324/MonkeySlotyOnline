@@ -55,11 +55,11 @@ public class SlotActivityMSO extends AppCompatActivity {
     boolean dd = false;
     final int DIALOG = 1;
     Button buttonMun;
-    Button buttonPoin;
+    Button buttonPoin,buttonbac1;
     Toast toast;
 
     public void pp() {
-
+        getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).edit().putInt("bet", 0).apply();
         showDialog(DIALOG);
     }
 
@@ -79,14 +79,18 @@ public class SlotActivityMSO extends AppCompatActivity {
         initMSO();
         viewModMsO.aa(this);
         textViewScore.setText("Score: " + getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("scor", 2000));
+        betMSO = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);
+        textViewBet.setText("Bet : " + betMSO);
         scoreMSO = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("scor", 2000);
         if (scoreMSO == 0) {
+
             pp();
         }
         buttonplus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (scoreMSO == 0 || scoreMSO < 0) {
+                    getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).edit().putInt("bet", 0).apply();
                 } else {
                     scoreMSO -= 200;
                     betMSO += 200;
@@ -103,7 +107,7 @@ public class SlotActivityMSO extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (betMSO == 0 || betMSO < 0) {
-
+                    getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).edit().putInt("bet", 0).apply();
                 } else {
 
                     scoreMSO += 200;
@@ -111,6 +115,9 @@ public class SlotActivityMSO extends AppCompatActivity {
                     textViewScore.setText("Score: " + scoreMSO);
                     textViewBet.setText("Bet : " + betMSO);
                     textViewWin.setText("Win : 0");
+                    if (betMSO == 0){
+                        getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).edit().putInt("bet", 0).apply();
+                    }
 
                 }
             }
@@ -129,6 +136,14 @@ public class SlotActivityMSO extends AppCompatActivity {
             }
         });
         startMSO();
+
+        buttonbac1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), StartActivityMSO.class));
+                finishAffinity();
+            }
+        });
 
 
     }
@@ -178,6 +193,12 @@ public class SlotActivityMSO extends AppCompatActivity {
 
 
                 } else {
+                    if (betMSO == getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0)){
+                        scoreMSO -= getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);
+                    }
+                    getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).edit().putInt("bet", betMSO).apply();
+                    textViewScore.setText("Score: " + scoreMSO);
+                    textViewWin.setText("Win : 0");
                     viewModMsO.move1(image1, image2, image3);
                     viewModMsO.move2(image4, image5, image6);
                     viewModMsO.move3(image7, image8, image9);
@@ -217,5 +238,6 @@ public class SlotActivityMSO extends AppCompatActivity {
         buttonplus = findViewById(R.id.buttonplus);
         buttonminus = findViewById(R.id.buttonminus);
         buttonall = findViewById(R.id.buttonall);
+        buttonbac1 = findViewById(R.id.buttonbac1);
     }
 }

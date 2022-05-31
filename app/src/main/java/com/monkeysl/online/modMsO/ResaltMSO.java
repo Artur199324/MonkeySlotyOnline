@@ -289,8 +289,8 @@ public class ResaltMSO {
                 }
                 textViewWin.setText("Win : " + betMSO);
                 scoreMSO += betMSO;
-                betMSO = 0;
-                textViewBet.setText("Bet : 0");
+                betMSO =  mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);
+                textViewBet.setText("Bet : " +betMSO);
 
             } else {
                 textViewWin.setText("Win : 0");
@@ -321,7 +321,7 @@ public class ResaltMSO {
                 }
             }
 
-            Log.d("weq", "1");
+
         }
 
         if (i2 > i1 && i2 > i3 && i2 > i4) {
@@ -335,7 +335,7 @@ public class ResaltMSO {
                 }
                 textViewWin.setText("Win : " + betMSO);
                 scoreMSO += betMSO;
-                betMSO = 0;
+                betMSO =  mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);;
                 textViewBet.setText("Bet : "+ betMSO);
                 textViewScore.setText("Score: " + scoreMSO);
 
@@ -367,7 +367,7 @@ public class ResaltMSO {
                     res = true;
                 }
             }
-            Log.d("weq", "2");
+
         }
 
         if (i3 > i1 && i3 > i2 && i3 > i4) {
@@ -380,7 +380,7 @@ public class ResaltMSO {
                 }
                 textViewWin.setText("Win : " + betMSO);
                 scoreMSO += betMSO;
-                betMSO = 0;
+                betMSO = mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);
                 textViewBet.setText("Bet : "+ betMSO);
                 textViewScore.setText("Score: " + scoreMSO);
 
@@ -412,7 +412,7 @@ public class ResaltMSO {
                     res = true;
                 }
             }
-            Log.d("weq", "3");
+
         }
 
         if (i4 > i1 && i4 > i2 && i4 > i3) {
@@ -426,7 +426,7 @@ public class ResaltMSO {
                 }
                 textViewWin.setText("Win : " + betMSO);
                 scoreMSO += betMSO;
-                betMSO = 0;
+                betMSO =  mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);
                 textViewBet.setText("Bet : "+ betMSO);
                 textViewScore.setText("Score: " + scoreMSO);
 
@@ -457,19 +457,19 @@ public class ResaltMSO {
                     res = true;
                 }
             }
-            Log.d("weq", "4");
+
         }
 
 
         if (res) {
 
-            Log.d("weq", "+");
+
             res = false;
         } else {
             textViewWin.setText("Win : 0");
-            betMSO = 0;
+            betMSO =  mainActivity.getSharedPreferences(mainActivity.getPackageName(), Context.MODE_PRIVATE).getInt("bet", 0);
             textViewBet.setText("Bet : "+ betMSO);
-            textViewWin.setText("Win : " + betMSO);
+
             LayoutInflater inflater = mainActivity.getLayoutInflater();
             View layout = inflater.inflate(R.layout.toast_lost,
                     (ViewGroup) mainActivity.findViewById(R.id.lost));
@@ -479,7 +479,7 @@ public class ResaltMSO {
             toast.setDuration(Toast.LENGTH_SHORT);
             toast.setView(layout);
             toast.show();
-            Log.d("weq", "-");
+
 
         }
 

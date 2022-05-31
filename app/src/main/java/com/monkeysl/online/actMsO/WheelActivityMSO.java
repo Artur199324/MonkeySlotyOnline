@@ -23,7 +23,7 @@ import java.util.Random;
 public class WheelActivityMSO extends AppCompatActivity {
 
     private ImageView imageViewWe;
-    private Button buttonTwist;
+    private Button buttonTwist,buttonbac2;
     private TextView textViewwiin,textViewscorrrr;
     private Random random;
     private int oldDeegreMSO = 0;
@@ -50,6 +50,14 @@ public class WheelActivityMSO extends AppCompatActivity {
 
             }
         });
+
+        buttonbac2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplication(), StartActivityMSO.class));
+                finishAffinity();
+            }
+        });
     }
 
     @Override
@@ -63,6 +71,7 @@ public class WheelActivityMSO extends AppCompatActivity {
         buttonTwist = findViewById(R.id.buttonTwist);
         textViewwiin = findViewById(R.id.textViewwiin);
         textViewscorrrr = findViewById(R.id.textViewscorrrr);
+        buttonbac2 = findViewById(R.id.buttonbac2);
     }
 
     private void ruu() {
