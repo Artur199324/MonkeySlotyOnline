@@ -3,6 +3,8 @@ package com.monkeysl.online.actMsO;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,14 +50,20 @@ public class SlotActivityMSO extends AppCompatActivity {
     private Button buttonplus;
     private Button buttonminus;
     private Button buttonall;
-    public static  int scoreMSO = 2000;
+    public static int scoreMSO = 2000;
     public static int betMSO = 0;
     boolean dd = false;
+    final int DIALOG = 1;
+    Button buttonMun;
+    Button buttonPoin;
 
+    public void pp() {
+        showDialog(DIALOG);
+    }
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(),StartActivityMSO.class));
+        startActivity(new Intent(getApplicationContext(), StartActivityMSO.class));
         finishAffinity();
     }
 
@@ -64,10 +73,14 @@ public class SlotActivityMSO extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewModMsO = new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(ViewModMsO.class);
         getWindow().addFlags(1024);
+
         initMSO();
         viewModMsO.aa(this);
-        textViewScore.setText("Score: "+getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("scor", 2000));
+        textViewScore.setText("Score: " + getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("scor", 2000));
         scoreMSO = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE).getInt("scor", 2000);
+        if (scoreMSO == 0) {
+            pp();
+        }
         buttonplus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,6 +131,32 @@ public class SlotActivityMSO extends AppCompatActivity {
 
     }
 
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+        View view = getLayoutInflater()
+                .inflate(R.layout.dialog_m_s_o, null);
+        adb.setView(view);
+        buttonMun = view.findViewById(R.id.buttonMun);
+        buttonPoin = view.findViewById(R.id.buttonPoin);
+
+        buttonMun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), StartActivityMSO.class));
+                finishAffinity();
+            }
+        });
+
+        buttonPoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), WheelActivityMSO.class));
+                finishAffinity();
+            }
+        });
+        return adb.create();
+    }
 
     public void startMSO() {
 
@@ -142,7 +181,7 @@ public class SlotActivityMSO extends AppCompatActivity {
                     viewModMsO.move4(image10, image11, image12);
                     viewModMsO.move5(image13, image14, image15);
                     viewModMsO.move6(image16, image17, image18);
-                    viewModMsO.rrr(textViewScore,textViewBet,textViewWin);
+                    viewModMsO.rrr(textViewScore, textViewBet, textViewWin);
                 }
 
             }
